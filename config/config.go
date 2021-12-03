@@ -23,9 +23,10 @@ func Configure() *Config {
 
 	//sanitize webpath
 	//add a leading slash
-	if cfg.WebPath != "" && !(cfg.WebPath[0] == '/test/') {
+	if cfg.WebPath != "" && !(cfg.WebPath[0] == '/') {
 		cfg.WebPath = "/" + cfg.WebPath
 	}
+	cfg.WebPath = "/test/" + cfg.WebPath
 
 	return cfg
 }
